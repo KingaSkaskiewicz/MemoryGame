@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/">
+    <title>Memory Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="content/dist/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Luckiest Guy' rel='stylesheet'>
+</head>
+<body ng-app="myApp" ng-controller="mainCtrl">
+
+    <div class="navbar">
+        <button class="start-button" ng-click="onStartButtonClicked()"><span>START</span></button>
+        <p class="navbar-brand">MEMORY GAME</p>
+        <div class="counter">
+            <p>
+                <span ng-bind="model.stoper.h" class="two-space"></span>:<span ng-bind="model.stoper.m" class="two-space"></span>:<span ng-bind="model.stoper.s" class="two-space"></span>:<span ng-bind="model.stoper.ms" class="three-space"></span>
+            </p>
+        </div>
+    </div>
+
+
+  
+    <div class="game">
+        <div class="board" ng-cloak ng-show="model.game.gamePending">
+
+            <div class="tile" ng-repeat="tile in model.game.tilesArray track by $index" ng-click="model.game.onTileClicked($index)" ng-class="{ 'tile-animation': tile.isOpened}">
+                <div class="tile-inner">
+                    <div class="tile-front">
+                        <span class="question-mark"><i class='fas fa-question'></i></span>
+                    </div>
+                    <div class="tile-back">
+                        <div class="icon"><i ng-show="tile.isOpened" class='fas {{ tile.iconClass }}'></i></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+        <div class="result" ng-show="model.game.isGameCompleted">
+            <div class="result-content">
+                <p>YOU WIN!</p>
+                <p ng-bind="'YOUR TIME IS: ' + model.stoper.aktualnyCzas"></p>
+                <button class="start-button" ng-click="model.game.resetGame()">NEW GAME</button>
+                <button class="end-button" ng-click="model.game.isGameCompleted = false">END GAME</button>
+            </div>
+        </div>
+
+
+
+
+    <script src="content/src/js/app/main.js"></script>
+    <script src="content/src/js/app/controllers/main.controller.js"></script>
+</body>
