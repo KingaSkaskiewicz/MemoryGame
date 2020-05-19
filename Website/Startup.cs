@@ -26,6 +26,8 @@ namespace Website
                 app.UseDeveloperExceptionPage();
             }
 
+            //for git pages to work nice with .net debugging
+            app.UsePathBase("/MemoryGame");
             app.UseDefaultFiles();
             app.UseStaticFiles();
         }
