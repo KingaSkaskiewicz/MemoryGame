@@ -128,7 +128,6 @@
 
             this.tilesArray[position].isOpened = true;
 
-            //spawdz czy koniec gry
             this.isGameCompleted = true;
             for (var i = 0; i < this.tilesArray.length; i++) {
                 if (!this.tilesArray[i].isOpened) {
@@ -162,9 +161,6 @@
             }
         }
 
-        // board: ,
-        // countdown:,
-        // result: 
     }
    
 
