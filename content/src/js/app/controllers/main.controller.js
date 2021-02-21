@@ -104,22 +104,22 @@
 
         },
         tilesArray: [
-            { type: 'a', isOpened: false, iconClass: 'fa-smile' },
-            { type: 'a', isOpened: false, iconClass: 'fa-smile' },
+            { type: 'a', isOpened: false, iconClass: 'fa-flask' },
+            { type: 'a', isOpened: false, iconClass: 'fa-flask' },
             { type: 'b', isOpened: false, iconClass: 'fa-battery-half' },
             { type: 'b', isOpened: false, iconClass: 'fa-battery-half' },
-            { type: 'c', isOpened: false, iconClass: 'fa-apple-alt' },
-            { type: 'c', isOpened: false, iconClass: 'fa-apple-alt' },
-            { type: 'd', isOpened: false, iconClass: 'fa-archway' },
-            { type: 'd', isOpened: false, iconClass: 'fa-archway' },
+            { type: 'c', isOpened: false, iconClass: 'fa-rocket' },
+            { type: 'c', isOpened: false, iconClass: 'fa-rocket' },
+            { type: 'd', isOpened: false, iconClass: 'fa-gift' },
+            { type: 'd', isOpened: false, iconClass: 'fa-gift' },
             { type: 'e', isOpened: false, iconClass: 'fa-anchor' },
             { type: 'e', isOpened: false, iconClass: 'fa-anchor' },
             { type: 'f', isOpened: false, iconClass: 'fa-bell' },
             { type: 'f', isOpened: false, iconClass: 'fa-bell' },
-            { type: 'e', isOpened: false, iconClass: 'fa-ice-cream' },
-            { type: 'e', isOpened: false, iconClass: 'fa-ice-cream' },
-            { type: 'f', isOpened: false, iconClass: 'fa-kiwi-bird' },
-            { type: 'f', isOpened: false, iconClass: 'fa-kiwi-bird' }
+            { type: 'e', isOpened: false, iconClass: 'fa-motorcycle' },
+            { type: 'e', isOpened: false, iconClass: 'fa-motorcycle' },
+            { type: 'f', isOpened: false, iconClass: 'fa-star' },
+            { type: 'f', isOpened: false, iconClass: 'fa-star' }
         ],
         onTileClicked: function (position) {
             if (this.isPreView || !this.gamePending || this.tilesArray[position].isOpened) {
